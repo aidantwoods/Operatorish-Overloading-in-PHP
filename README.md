@@ -54,7 +54,7 @@ abstract public function offsetGet($offset)
 ```
 There is no restriction on `$offset`, unlike when using arrays.
 
-Personally I find this to be the most interesting operator so far, because it allows arbitrary values in both slots (though obviously the value in slot one must impelemnt the required interface).
+Personally I find this to be the most interesting operator so far, because it allows arbitrary values in both slots (though obviously the value in slot one must implement the required interface).
 
 This operator could be designed to be commutative if both values implement the required interface. And could also/instead be polymorphic based on type detection.
 
@@ -68,7 +68,7 @@ This is the freest operator you have control over (though probably also the most
 ## Unary Pseudo-Operators
 ### Stringyness
 Okay, so this is not an operator (even by the very loose definition of "some language symbol" above) – but its behaviour can be invoked by one (among many things).
-A class may implement the `__toString()` method to determine how it should behave when treated like a string. You may ask, is this even an operator? It depends on your opinion, but I felt it was worth mentioning. It should have method signature.
+A class may implement the `__toString()` method to determine how it should behave when treated like a string. It should have method signature.
 
 ```php
 public function __toString(): string
